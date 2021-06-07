@@ -1,6 +1,7 @@
 package com.rsh_engineering.tkachenkoni.checkpressurelist.di.module
 
 import android.content.Context
+import com.rsh_engineering.tkachenkoni.checkpressurelist.App
 import com.rsh_engineering.tkachenkoni.checkpressurelist.di.scope.AppScope
 import com.rsh_engineering.tkachenkoni.checkpressurelist.presentation.db.DataBaseServices
 import dagger.Module
@@ -15,8 +16,8 @@ import dagger.Provides
 class DatabaseModule {
 
     @Provides
-    fun provideDataBaseServices(context: Context): DataBaseServices? {
-        return DataBaseServices.getDatabase(context = context)
+    fun provideDataBaseServices(): DataBaseServices? {
+        return DataBaseServices.getDatabase(context = App.instance.applicationContext)
     }
 
 }
