@@ -10,9 +10,9 @@ import com.rsh_engineering.tkachenkoni.checkpressurelist.data.model.PressureItem
  */
 interface PressureRepository {
 
-    fun getPressureItemByCurrentId(Id: Long) : PressureItem
+    fun getPressureItemByCurrentId(Id: Long) : PressureItemEntity
 
-    fun getListPressureItem(): List<PressureItem>
+    fun getListPressureItem(): List<PressureItemEntity>
 
     fun insert(pressureItemEntity: PressureItemEntity?)
 

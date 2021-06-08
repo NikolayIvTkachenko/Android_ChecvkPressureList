@@ -13,11 +13,13 @@ import com.rsh_engineering.tkachenkoni.checkpressurelist.data.model.PressureItem
 @Dao
 interface PressureItemEntityDao {
 
-    @Query("SELECT * FROM human WHERE Id = :Id")
-    fun getPressureItemByCurrentId(Id: Long) : PressureItem
+    @Transaction
+    @Query("SELECT * FROM pressure WHERE Id = :Id")
+    fun getPressureItemByCurrentId(Id: Long) : PressureItemEntity
 
-    @Query("SELECT * FROM human")
-    fun getListPressureItem(): List<PressureItem>
+    @Transaction
+    @Query("SELECT * FROM pressure")
+    fun getListPressureItem(): List<PressureItemEntity>
 
     @Insert
     fun insert(pressureItemEntity: PressureItemEntity?)

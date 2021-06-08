@@ -14,11 +14,11 @@ import javax.inject.Inject
  */
 class HumanRepositoryImpl @Inject constructor(val humanDao: HumanPropertyEntityDao): HumanRepository {
 
-    override fun getHumanByCurrentId(Id: Long): HumanProperty {
+    override fun getHumanByCurrentId(Id: Long): HumanPropertyEntity {
         TODO("Not yet implemented")
     }
 
-    override fun getListHuman(): List<HumanProperty> {
+    override fun getListHuman(): List<HumanPropertyEntity> {
         TODO("Not yet implemented")
     }
 

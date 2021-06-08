@@ -8,7 +8,7 @@ package com.rsh_engineering.tkachenkoni.checkpressurelist
 object AppConstants {
 
     const val DATABASE_NAME = "health_human"
-    const val VERSION_DB = 2
+    const val VERSION_DB = 3
 
     const val changeSize = 3
 

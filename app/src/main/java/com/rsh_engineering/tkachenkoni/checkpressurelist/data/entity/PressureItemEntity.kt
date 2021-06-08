@@ -1,6 +1,7 @@
 package com.rsh_engineering.tkachenkoni.checkpressurelist.data.entity
 
 import android.os.Parcelable
+import androidx.annotation.NonNull
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -15,8 +16,10 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class PressureItemEntity(
     @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "PressureId")
-    val id : Long,
+    @NonNull
+    @ColumnInfo(name = "Id")
+    val Id : Long,
+    @NonNull
     @ColumnInfo(name = "HumanId")
     val humanId : Long,
     @ColumnInfo(name = "High")

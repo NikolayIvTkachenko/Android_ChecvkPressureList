@@ -14,19 +14,19 @@ import javax.inject.Inject
 class WeightRepositoryImpl @Inject constructor(val weightDao: WeightItemEntityDao): WeightRepository {
 
     override fun insertWeight(weightItemEntity: WeightItemEntity?) {
-        TODO("Not yet implemented")
+        weightDao.insert(weightItemEntity)
     }
 
     override fun updateWeight(weightItemEntity: WeightItemEntity?) {
-        TODO("Not yet implemented")
+        weightDao.update(weightItemEntity)
     }
 
     override fun deleteWeight(weightItemEntity: WeightItemEntity?) {
-        TODO("Not yet implemented")
+        weightDao.delete(weightItemEntity)
     }
 
     override fun insertWeighReplace(weightItemEntity: WeightItemEntity?) {
-        TODO("Not yet implemented")
+        weightDao.insertWeightItemEntity(weightItemEntity)
     }
 
 }

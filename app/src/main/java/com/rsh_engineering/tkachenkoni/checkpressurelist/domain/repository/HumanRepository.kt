@@ -10,9 +10,9 @@ import com.rsh_engineering.tkachenkoni.checkpressurelist.data.model.HumanPropert
  */
 interface HumanRepository {
 
-    fun getHumanByCurrentId(Id: Long) : HumanProperty
+    fun getHumanByCurrentId(Id: Long) : HumanPropertyEntity
 
-    fun getListHuman(): List<HumanProperty>
+    fun getListHuman(): List<HumanPropertyEntity>
 
     fun insertHuman(humanPropertyEntity: HumanPropertyEntity?)
 

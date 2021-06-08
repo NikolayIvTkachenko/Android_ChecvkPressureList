@@ -12,11 +12,13 @@ import com.rsh_engineering.tkachenkoni.checkpressurelist.data.model.HumanPropert
 @Dao
 interface HumanPropertyEntityDao {
 
+    @Transaction
     @Query("SELECT * FROM human WHERE Id = :Id")
-    fun getHumanByCurrentId(Id: Long) : HumanProperty
+    fun getHumanByCurrentId(Id: Long) : HumanPropertyEntity
 
+    @Transaction
     @Query("SELECT * FROM human")
-    fun getListHuman(): List<HumanProperty>
+    fun getListHuman(): List<HumanPropertyEntity>
 
     @Insert
     fun insert(humanPropertyEntity: HumanPropertyEntity?)

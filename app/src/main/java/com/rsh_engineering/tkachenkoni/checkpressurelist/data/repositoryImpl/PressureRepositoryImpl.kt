@@ -13,27 +13,27 @@ import javax.inject.Inject
  */
 class PressureRepositoryImpl @Inject constructor(val pressureDao: PressureItemEntityDao) : PressureRepository {
 
-    override fun getPressureItemByCurrentId(Id: Long): PressureItem {
-        TODO("Not yet implemented")
+    override fun getPressureItemByCurrentId(Id: Long): PressureItemEntity {
+        return pressureDao.getPressureItemByCurrentId(Id)
     }
 
-    override fun getListPressureItem(): List<PressureItem> {
-        TODO("Not yet implemented")
+    override fun getListPressureItem(): List<PressureItemEntity> {
+        return pressureDao.getListPressureItem()
     }
 
     override fun insert(pressureItemEntity: PressureItemEntity?) {
-        TODO("Not yet implemented")
+        pressureDao.insert(pressureItemEntity)
     }
 
     override fun update(pressureItemEntity: PressureItemEntity?) {
-        TODO("Not yet implemented")
+        pressureDao.update(pressureItemEntity)
     }
 
     override fun delete(pressureItemEntity: PressureItemEntity?) {
-        TODO("Not yet implemented")
+        pressureDao.delete(pressureItemEntity)
     }
 
     override fun insertPressureItemEntity(pressureItemEntity: PressureItemEntity?) {
-        TODO("Not yet implemented")
+        pressureDao.insertPressureItemEntity(pressureItemEntity)
     }
 }
