@@ -1,6 +1,7 @@
 package com.rsh_engineering.tkachenkoni.checkpressurelist.presentation.db.dao
 
-import androidx.room.Dao
+import androidx.room.*
+import com.rsh_engineering.tkachenkoni.checkpressurelist.data.entity.WeightItemEntity
 
 /**
  *
@@ -9,4 +10,17 @@ import androidx.room.Dao
  */
 @Dao
 interface WeightItemEntityDao {
+
+    @Insert
+    fun insert(weightItemEntity: WeightItemEntity?)
+
+    @Update
+    fun update(weightItemEntity: WeightItemEntity?)
+
+    @Delete
+    fun delete(weightItemEntity: WeightItemEntity?)
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertWeightItemEntity(weightItemEntity: WeightItemEntity?)
+
 }

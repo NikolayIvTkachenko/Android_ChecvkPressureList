@@ -1,11 +1,14 @@
 package com.rsh_engineering.tkachenkoni.checkpressurelist.data.model
 
+import androidx.room.Embedded
+import com.rsh_engineering.tkachenkoni.checkpressurelist.data.entity.WeightItemEntity
+
 /**
  *
  * Created by Nikolay Tkachenko on 07, June, 2021
  *
  */
-class WeightItem(
-    val weigh: Double,
-    val dateMeasure: Long
+data class WeightItem(
+    @Embedded
+    val weight: WeightItemEntity
 )

@@ -1,7 +1,8 @@
-package com.rsh_engineering.tkachenkoni.checkpressurelist
+package com.rsh_engineering.tkachenkoni.checkpressurelist.presentation.utils
 
 import android.content.Context
 import android.content.SharedPreferences
+import com.rsh_engineering.tkachenkoni.checkpressurelist.AppConstants
 
 /**
  *

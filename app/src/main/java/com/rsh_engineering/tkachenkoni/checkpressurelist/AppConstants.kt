@@ -33,4 +33,6 @@ object AppConstants {
 
     const val URL_APP = "http://www.rsh-engineering.com/mobilesoft/android_development.html"
 
+    const val SHARED_PREFS_NAME = "app_settings"
+
 }

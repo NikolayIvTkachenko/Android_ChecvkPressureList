@@ -1,4 +1,4 @@
-package com.rsh_engineering.tkachenkoni.checkpressurelist.domain.entity
+package com.rsh_engineering.tkachenkoni.checkpressurelist.data.entity
 
 import android.os.Parcelable
 import androidx.room.ColumnInfo
@@ -15,8 +15,8 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class HumanPropertyEntity(
     @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "HumanId")
-    val id: Long,
+    @ColumnInfo(name = "Id")
+    val Id: Long,
     @ColumnInfo(name = "Name")
     val nameHuman: String,
     @ColumnInfo(name = "Family")

@@ -8,9 +8,9 @@ import com.rsh_engineering.tkachenkoni.checkpressurelist.AppConstants
 import com.rsh_engineering.tkachenkoni.checkpressurelist.presentation.db.dao.HumanPropertyEntityDao
 import com.rsh_engineering.tkachenkoni.checkpressurelist.presentation.db.dao.PressureItemEntityDao
 import com.rsh_engineering.tkachenkoni.checkpressurelist.presentation.db.dao.WeightItemEntityDao
-import com.rsh_engineering.tkachenkoni.checkpressurelist.domain.entity.HumanPropertyEntity
-import com.rsh_engineering.tkachenkoni.checkpressurelist.domain.entity.PressureItemEntity
-import com.rsh_engineering.tkachenkoni.checkpressurelist.domain.entity.WeightItemEntity
+import com.rsh_engineering.tkachenkoni.checkpressurelist.data.entity.HumanPropertyEntity
+import com.rsh_engineering.tkachenkoni.checkpressurelist.data.entity.PressureItemEntity
+import com.rsh_engineering.tkachenkoni.checkpressurelist.data.entity.WeightItemEntity
 
 /**
  *

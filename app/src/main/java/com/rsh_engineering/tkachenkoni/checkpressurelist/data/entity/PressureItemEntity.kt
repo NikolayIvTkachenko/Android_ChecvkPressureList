@@ -1,4 +1,4 @@
-package com.rsh_engineering.tkachenkoni.checkpressurelist.domain.entity
+package com.rsh_engineering.tkachenkoni.checkpressurelist.data.entity
 
 import android.os.Parcelable
 import androidx.room.ColumnInfo
@@ -17,6 +17,8 @@ data class PressureItemEntity(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "PressureId")
     val id : Long,
+    @ColumnInfo(name = "HumanId")
+    val humanId : Long,
     @ColumnInfo(name = "High")
     val highPressure: Int,
     @ColumnInfo(name = "Low")

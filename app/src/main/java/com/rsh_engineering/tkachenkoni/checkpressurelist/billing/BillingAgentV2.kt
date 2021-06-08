@@ -4,7 +4,7 @@ import android.app.Activity
 import android.text.TextUtils
 import android.util.Log
 import com.android.billingclient.api.*
-import com.rsh_engineering.tkachenkoni.checkpressurelist.PrefUtils
+import com.rsh_engineering.tkachenkoni.checkpressurelist.presentation.utils.PrefUtils
 import java.util.*
 import kotlin.collections.HashMap
 
