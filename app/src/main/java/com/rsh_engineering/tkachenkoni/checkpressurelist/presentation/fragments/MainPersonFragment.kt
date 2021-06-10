@@ -1,10 +1,8 @@
 package com.rsh_engineering.tkachenkoni.checkpressurelist.presentation.fragments
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import com.rsh_engineering.tkachenkoni.checkpressurelist.R
 
 class MainPersonFragment : Fragment() {
@@ -18,9 +16,25 @@ class MainPersonFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main_person, container, false)
+        val view = inflater.inflate(R.layout.fragment_main_person, container, false)
+        setHasOptionsMenu(true)
+
+
+
+        return view
     }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.main_person_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+//        if(item.itemId == R.id.menu_add){
+//            insertDataToDb()
+//        }
+
+        return super.onOptionsItemSelected(item)
+    }
 
 }

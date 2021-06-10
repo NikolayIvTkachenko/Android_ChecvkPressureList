@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/test_01"
+        android:title="test_011"
+        android:icon="@drawable/ic_test"/>
+
+    <item android:id="@+id/test_02"
+        android:title="test_012"
+        android:icon="@drawable/ic_test"/>
+</menu>

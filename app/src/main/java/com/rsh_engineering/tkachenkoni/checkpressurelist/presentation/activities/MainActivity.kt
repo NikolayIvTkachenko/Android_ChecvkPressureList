@@ -30,10 +30,13 @@ class MainActivity : AppCompatActivity(), BillingCallback {
         navController = findNavController(this, R.id.navHostFragment)
         navHostFragment = supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
 
-        val appBarConfiguration = AppBarConfiguration(setOf(
-            R.id.mainPersonFragment,
-            R.id.pressureFragment,
-            R.id.weightFragment))
+        val appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.mainPersonFragment,
+                R.id.pressureFragment,
+                R.id.weightFragment
+            )
+        )
         setupActionBarWithNavController(navController, appBarConfiguration)
         bottomNavigationView.setupWithNavController(navController)
 
@@ -44,11 +47,16 @@ class MainActivity : AppCompatActivity(), BillingCallback {
         
     }
 
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp() || super.onSupportNavigateUp()
+    }
 
-
+    private fun removeAds() {
+        billingAgent!!.purshaseView()
+    }
 
     override fun onTokenConsumed() {
-        TODO("Not yet implemented")
+        navController.navigate(R.id.mainPersonFragment)
     }
 
     override fun onDestroy() {
