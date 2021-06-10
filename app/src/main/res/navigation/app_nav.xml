@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/app_nav">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/mainPersonFragment">
 
+    <fragment
+        android:id="@+id/mainPersonFragment"
+        android:name="com.rsh_engineering.tkachenkoni.checkpressurelist.presentation.fragments.MainPersonFragment"
+        android:label="fragment_main_person"
+        tools:layout="@layout/fragment_main_person" />
+    <fragment
+        android:id="@+id/weightFragment"
+        android:name="com.rsh_engineering.tkachenkoni.checkpressurelist.presentation.fragments.WeightFragment"
+        android:label="fragment_weight"
+        tools:layout="@layout/fragment_weight" />
+    <fragment
+        android:id="@+id/pressureFragment"
+        android:name="com.rsh_engineering.tkachenkoni.checkpressurelist.presentation.fragments.PressureFragment"
+        android:label="fragment_pressure"
+        tools:layout="@layout/fragment_pressure" />
 </navigation>

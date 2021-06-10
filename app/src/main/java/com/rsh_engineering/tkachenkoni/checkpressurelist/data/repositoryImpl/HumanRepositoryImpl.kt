@@ -1,10 +1,15 @@
 package com.rsh_engineering.tkachenkoni.checkpressurelist.data.repositoryImpl
 
+import androidx.lifecycle.LiveData
+import androidx.room.Query
+import androidx.room.Transaction
 import com.rsh_engineering.tkachenkoni.checkpressurelist.data.entity.HumanPropertyEntity
 import com.rsh_engineering.tkachenkoni.checkpressurelist.data.model.HumanProperty
 import com.rsh_engineering.tkachenkoni.checkpressurelist.domain.repository.HumanRepository
 import com.rsh_engineering.tkachenkoni.checkpressurelist.presentation.db.dao.HumanPropertyEntityDao
 import com.rsh_engineering.tkachenkoni.checkpressurelist.presentation.db.dao.PressureItemEntityDao
+import io.reactivex.Flowable
+import io.reactivex.Single
 import javax.inject.Inject
 
 /**
@@ -14,28 +19,53 @@ import javax.inject.Inject
  */
 class HumanRepositoryImpl @Inject constructor(val humanDao: HumanPropertyEntityDao): HumanRepository {
 
+    override fun getHumanByCurrentIdGeneral(Id: Long): HumanProperty {
+        return humanDao.getHumanByCurrentIdGeneral(Id)
+    }
+
+    override fun getListHumanGeneral(): List<HumanPropertyEntity> {
+        return humanDao.getListHumanGeneral()
+    }
+
+    override fun getHumanByCurrentIdGeneralSingle(Id: Long): Flowable<HumanProperty> {
+        return humanDao.getHumanByCurrentIdGeneralSingle(Id)
+    }
+
+    override fun getListHumanGeneralSingle():  Flowable<List<HumanPropertyEntity>> {
+        return humanDao.getListHumanGeneralSingle()
+    }
+
+    override fun getHumanByCurrentIdGeneralLiveData(Id: Long): LiveData<HumanProperty> {
+        return humanDao.getHumanByCurrentIdGeneralLiveData(Id)
+    }
+
+    override fun getListHumanGeneralLiveData(): LiveData<List<HumanPropertyEntity>> {
+        return humanDao.getListHumanGeneralLiveData()
+    }
+
+
     override fun getHumanByCurrentId(Id: Long): HumanPropertyEntity {
-        TODO("Not yet implemented")
+        return humanDao.getHumanByCurrentId(Id)
     }
 
     override fun getListHuman(): List<HumanPropertyEntity> {
-        TODO("Not yet implemented")
+        return humanDao.getListHuman()
     }
 
     override fun insertHuman(humanPropertyEntity: HumanPropertyEntity?) {
-        TODO("Not yet implemented")
+        humanDao.insert(humanPropertyEntity)
     }
 
     override fun updateHuman(humanPropertyEntity: HumanPropertyEntity?) {
-        TODO("Not yet implemented")
+        humanDao.update(humanPropertyEntity)
     }
 
     override fun deleteHuman(humanPropertyEntity: HumanPropertyEntity?) {
-        TODO("Not yet implemented")
+        humanDao.delete(humanPropertyEntity)
     }
 
     override fun insertHumanReplace(humanPropertyEntity: HumanPropertyEntity?) {
-        TODO("Not yet implemented")
+        humanDao.insertHumanProperty(humanPropertyEntity)
     }
 
 }

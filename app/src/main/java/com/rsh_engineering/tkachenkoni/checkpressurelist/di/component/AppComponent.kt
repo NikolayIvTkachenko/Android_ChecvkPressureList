@@ -1,9 +1,9 @@
 package com.rsh_engineering.tkachenkoni.checkpressurelist.di.component
 
-import android.app.Activity
 import com.rsh_engineering.tkachenkoni.checkpressurelist.di.module.DatabaseModule
+import com.rsh_engineering.tkachenkoni.checkpressurelist.di.module.SharedPreferencesModule
 import com.rsh_engineering.tkachenkoni.checkpressurelist.di.scope.AppScope
-import com.rsh_engineering.tkachenkoni.checkpressurelist.presentation.MainActivity
+import com.rsh_engineering.tkachenkoni.checkpressurelist.presentation.activities.MainActivity
 import dagger.Component
 
 /**
@@ -14,7 +14,8 @@ import dagger.Component
 @AppScope
 @Component(
     modules = [
-        DatabaseModule::class
+        DatabaseModule::class,
+        SharedPreferencesModule::class
     ]
 )
 interface AppComponent {

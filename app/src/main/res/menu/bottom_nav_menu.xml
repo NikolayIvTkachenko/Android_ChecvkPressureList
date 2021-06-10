@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/mainPersonFragment"
+        android:title="@string/main_person"
+        android:icon="@drawable/ic_person"/>
 
+    <item android:id="@+id/pressureFragment"
+        android:title="@string/pressure_person"
+        android:icon="@drawable/ic_pressure"/>
+
+    <item android:id="@+id/weightFragment"
+        android:title="@string/weight_person"
+        android:icon="@drawable/ic_weight"/>
 </menu>

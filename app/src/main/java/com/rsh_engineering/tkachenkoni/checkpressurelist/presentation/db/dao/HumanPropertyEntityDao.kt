@@ -1,8 +1,11 @@
 package com.rsh_engineering.tkachenkoni.checkpressurelist.presentation.db.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.rsh_engineering.tkachenkoni.checkpressurelist.data.entity.HumanPropertyEntity
 import com.rsh_engineering.tkachenkoni.checkpressurelist.data.model.HumanProperty
+import io.reactivex.Flowable
+import io.reactivex.Single
 
 /**
  *
@@ -11,6 +14,30 @@ import com.rsh_engineering.tkachenkoni.checkpressurelist.data.model.HumanPropert
  */
 @Dao
 interface HumanPropertyEntityDao {
+
+    @Transaction
+    @Query("SELECT * FROM human WHERE Id = :Id")
+    fun getHumanByCurrentIdGeneral(Id: Long) : HumanProperty
+
+    @Transaction
+    @Query("SELECT * FROM human")
+    fun getListHumanGeneral(): List<HumanPropertyEntity>
+
+    @Transaction
+    @Query("SELECT * FROM human WHERE Id = :Id")
+    fun getHumanByCurrentIdGeneralSingle(Id: Long) : Flowable<HumanProperty>
+
+    @Transaction
+    @Query("SELECT * FROM human")
+    fun getListHumanGeneralSingle(): Flowable<List<HumanPropertyEntity>>
+
+    @Transaction
+    @Query("SELECT * FROM human WHERE Id = :Id")
+    fun getHumanByCurrentIdGeneralLiveData(Id: Long) : LiveData<HumanProperty>
+
+    @Transaction
+    @Query("SELECT * FROM human")
+    fun getListHumanGeneralLiveData(): LiveData<List<HumanPropertyEntity>>
 
     @Transaction
     @Query("SELECT * FROM human WHERE Id = :Id")
