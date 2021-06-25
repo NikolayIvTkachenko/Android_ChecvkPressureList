@@ -8,6 +8,10 @@
         android:title="@string/pressure_person"
         android:icon="@drawable/ic_pressure"/>
 
+    <item android:id="@+id/temperatureFragment"
+        android:title="@string/temperature_person"
+        android:icon="@drawable/ic_thermeter"/>
+
     <item android:id="@+id/weightFragment"
         android:title="@string/weight_person"
         android:icon="@drawable/ic_weight"/>

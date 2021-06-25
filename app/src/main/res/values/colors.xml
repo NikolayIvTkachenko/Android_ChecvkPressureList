@@ -7,4 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="critical_very_low_value">#3300CC</color>
+    <color name="critical_low_value">#00CCFF</color>
+    <color name="normal">#00FF66</color>
+    <color name="critical_high_value">#FFCC33</color>
+    <color name="critical_very_high_value">#FF3300</color>
+
+
 </resources>

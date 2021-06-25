@@ -5,8 +5,7 @@
 
     <string name="main_person">Person</string>
     <string name="pressure_person">Blood Pressure</string>
+    <string name="temperature_person">Blood Pressure</string>
     <string name="weight_person">Weight</string>
-
-
 
 </resources>

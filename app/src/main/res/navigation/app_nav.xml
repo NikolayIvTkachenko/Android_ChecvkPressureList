@@ -20,4 +20,9 @@
         android:name="com.rsh_engineering.tkachenkoni.checkpressurelist.presentation.fragments.PressureFragment"
         android:label="fragment_pressure"
         tools:layout="@layout/fragment_pressure" />
+    <fragment
+        android:id="@+id/temperatureFragment"
+        android:name="com.rsh_engineering.tkachenkoni.checkpressurelist.presentation.fragments.TemperatureFragment"
+        android:label="fragment_temperature"
+        tools:layout="@layout/fragment_temperature" />
 </navigation>

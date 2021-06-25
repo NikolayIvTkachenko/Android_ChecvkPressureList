@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity(), BillingCallback {
             setOf(
                 R.id.mainPersonFragment,
                 R.id.pressureFragment,
+                R.id.temperatureFragment,
                 R.id.weightFragment
             )
         )

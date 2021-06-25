@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/title_weight"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Weight:" />
+
+    <TextView
+        android:id="@+id/value_weight"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/title_weight"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="80" />
+
+    <TextView
+        android:id="@+id/title_value"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/value_weight"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="kg" />
+
+    <TextView
+        android:id="@+id/title_date_time"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:text=""
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_weight"
+        tools:text="Date and Time: " />
+
+    <TextView
+        android:id="@+id/value_date_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text=""
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/title_date_time"
+        app:layout_constraintTop_toTopOf="@+id/title_date_time"
+        tools:text="2021-06-09 11:43" />
+
+    <ImageView
+        android:id="@+id/weight_0"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_weight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/critical_very_high_value"/>
+
+    <ImageView
+        android:id="@+id/weight_1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/ic_weight"
+        app:layout_constraintEnd_toStartOf="@+id/weight_0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/critical_high_value"/>
+
+    <ImageView
+        android:id="@+id/weight_2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/ic_weight"
+        app:layout_constraintEnd_toStartOf="@+id/weight_1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/normal"/>
+
+    <ImageView
+        android:id="@+id/weight_3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/ic_weight"
+        app:layout_constraintEnd_toStartOf="@+id/weight_2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/critical_low_value"/>
+
+    <ImageView
+        android:id="@+id/weight_4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/ic_weight"
+        app:layout_constraintEnd_toStartOf="@+id/weight_3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/critical_very_low_value"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
